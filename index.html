@@ -16,66 +16,168 @@
     <style>
         html, body {
             height: 100%;
+            background-color: #FFFFFF;
+            color: #9FA1A5;
         }
 
         body {
-            background: url("background.jpeg") top center no-repeat;
             display: -ms-flexbox;
             display: flex;
         }
 
         main {
-            background: rgba(255, 255, 255, 0.8);
+            margin-top: 80px;
         }
 
         footer {
             /*background-color: #8A8A8A;*/
         }
 
-        .content-wrapper {
-            max-width: 42em;
+        .content-background {
+            background: url("background.jpeg") no-repeat bottom center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
 
-        form {
-            color: #9FA1A5;
+        .form-wrapper {
+            background: rgba(255, 255, 255, 0.9);
+            margin-bottom: -60px;
         }
+
+        .cta-wrapper {
+            color: #fff;
+            text-shadow: 1px 1px #9FA1A5;
+        }
+
+        h4 {
+            color: #FCB750;
+        }
+
+        .header-content-wrapper {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            background-color: #FCB750!important;
+        }
+
+        button, input:focus {
+            border-color: #FCB750!important;
+        }
+
+        input:focus {
+            box-shadow: none!important;
+        }
+
+        .w-75 {
+            max-width: 1200px;
+        }
+
+        .how-it-works-row {
+            margin: 120px 0;
+        }
+
     </style>
 </head>
 <body>
-    <div class="content-wrapper d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-            <nav class="site-header sticky-top py-1">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="#"><img src="e2erent_logo.png" alt="E2ERent" class="image" height="48" width="48"/></a>
-                </nav>
-            </nav>
-        </header>
-        <main role="main" class="p-5">
-            <h1 class="text-center">Rent your new home with ease</h1>
+    <div class="d-flex w-100 h-100 flex-column">
+        <div class="content-background">
+            <header class="mb-auto">
+                <div class="header-content-wrapper">
+                    <nav class="site-header d-flex justify-content-between align-items-center py-1 w-75 mx-auto px-3">
+                        <a class="navbar-brand" href="#"><img src="e2erent_logo.png" alt="E2ERent" class="image" height="48" width="48"/></a>
 
-            <div id="mc_embed_signup">
-                <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div class="form-group">
-                        <label for="mce-FNAME">Name</label>
-                        <input name="FNAME" type="email" class="form-control" id="mce-FNAME">
-                    </div>
-                    <div class="form-group">
-                        <label for="mce-EMAIL">Email address</label>
-                        <input name="EMAIL" type="email" class="form-control" id="mce-EMAIL" aria-describedby="emailHelp">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="mce-EMAIL">Phone</label>
-                        <input name="PHONE" type="email" class="form-control" id="mce-PHONE">
+                        <a class="btn btn-link text-white">Publish a property</a>
+                    </nav>
+                </div>
+
+                <div class="row w-75 mx-auto pt-4">
+                    <div class="col-lg-7 cta-wrapper my-auto">
+                        <h1>Rent your new home without abusive charges with a few clicks</h1>
+                        <h2 class="h5">Yeah, that's right! No agency fee, no security deposit and you can do everything online!</h2>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </form>
+                    <div class="col-lg-5">
+                        <div class="form-wrapper shadow-sm p-4">
+                            <h3>Apply now</h3>
+                            <p>Enter your info and then you receive a notification when our platform is live.</p>
+
+                            <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div class="form-group">
+                                    <label for="mce-EMAIL">Email address</label>
+                                    <input name="EMAIL" type="email" class="form-control" id="mce-EMAIL" aria-describedby="emailHelp" placeholder="your@email" required>
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="PHONE">Phone</label>
+                                    <input name="PHONE" type="tel" class="form-control" id="PHONE" placeholder="(+352) 000-000">
+                                </div>
+
+                                <div class="form-group form-check pb-2">
+                                    <input type="checkbox" name="gdpr[72353]" value="Y" class="form-check-input" id="gdpr">
+                                    <label class="form-check-label" for="gdpr">I agree that the information entered will be used to allow E2E Rent to contact me when the platform goes live.</label>
+                                </div>
+
+                                <input type="hidden" name="group[21897]" value="1">
+
+                                <button type="submit" class="btn btn-primary btn-block">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        </div>
+
+        <main role="main" class="w-75 px-4 mx-auto">
+            <h3 class="text-center my-4">How it Works</h3>
+
+            <div class="row how-it-works-row">
+                <div class="col-lg-5 my-auto">
+                    <h4 class="h1">Search</h4>
+
+                    <p>Start by exploring properties to rent. Apply filters like pets allowed, furnished and the number
+                        of bedrooms to narrow your options. You can also save favorites to a wishlist.</p>
+                </div>
+
+                <div class="col-lg-7 text-left">
+                    <video class="elementor-video" src="https://videos.files.wordpress.com/D1837SHJ/e2e-vignette-01_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                </div>
             </div>
-            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE5';ftypes[5]='radio';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+            <div class="row how-it-works-row">
+                <div class="col-lg-7 text-center">
+                    <video class="elementor-video" src="https://videos.files.wordpress.com/YA5KjsTW/e2e-vignette-02-1_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                </div>
+
+                <div class="col-lg-5 my-auto text-left">
+                    <h4 class="h1">Visit</h4>
+
+                    <p>Schedule a visit and take a closer look at the property you liked, or take for granted the
+                        information available online as a virtual visit.</p>
+                </div>
+            </div>
+
+            <div class="row how-it-works-row">
+                <div class="col-lg-5 my-auto">
+                    <h4 class="h1">Rent</h4>
+
+                    <p>Click on rent, digitally sign the contract, and you are all set. Now get the keys, move to your
+                        new home, and relax. We take care of everything from end to end.</p>
+                </div>
+
+                <div class="col-lg-7 text-center">
+                    <video class="elementor-video" src="https://videos.files.wordpress.com/gPg6ai0e/e2e-vignette-03_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                </div>
+            </div>
+
+            <h3 class="text-center my-4">Renting a property was never this easy</h3>
         </main>
 
-        <footer class="mt-auto">
+        <footer class="mt-auto w-75 px-4 mx-auto">
             <p>Copyright © 2021 E2ERent</p>
         </footer>
     </div>
