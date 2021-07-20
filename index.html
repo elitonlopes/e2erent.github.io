@@ -142,7 +142,7 @@
 
                                 <div class="form-group">
                                     <label for="inputPhone">Phone</label>
-                                    <input name="PHONE" type="tel" class="form-control" id="inputPhone" placeholder="(+352) 000-000">
+                                    <input name="PHONE" type="tel" class="form-control" id="inputPhone" placeholder="(+352)000000">
                                 </div>
 
                                 <div class="form-group form-check">
@@ -154,7 +154,7 @@
                                 </div>
 
                                 <div class="form-group pb-2">
-                                    <div class="g-recaptcha" data-sitekey="6LfYHKsbAAAAADWv-fEOq8sfnFQJwHDA4zyYM4K8" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                    <div class="g-recaptcha" data-sitekey="6LfYHKsbAAAAADWv-fEOq8sfnFQJwHDA4zyYM4K8" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
                                     <input class="form-control d-none" name="captcha" data-recaptcha="true" required>
                                     <div class="invalid-feedback">
                                         Please complete the Captcha.
@@ -240,6 +240,9 @@
 
         $('#buttonSubmit').on('click', function (e) {
             e.preventDefault();
+
+            $('#feedback-success').addClass('d-none');
+            $('#feedback-error').addClass('d-none');
 
             const form = $(this).parents('form');
             let hasErrors = false;
