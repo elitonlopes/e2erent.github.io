@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-4.6.0.min.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png">
@@ -27,10 +27,6 @@
 
         header {
             background: rgba(0, 0, 0, 0.3);
-        }
-
-        main {
-            margin-top: 80px;
         }
 
         footer {
@@ -82,24 +78,33 @@
         .how-it-works-row {
             margin: 120px 0;
         }
-
     </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCD17CX9N5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-YCD17CX9N5');
+    </script>
 </head>
 <body>
     <div class="d-flex w-100 h-100 flex-column">
         <div class="content-background">
             <header class="mb-auto">
                 <div class="header-content-wrapper">
-                    <nav class="site-header d-flex justify-content-between align-items-center py-1 w-75 mx-auto px-3">
+                    <nav class="site-header container-lg d-flex justify-content-between align-items-center py-1 mx-auto px-3">
                         <a class="navbar-brand" href="#"><img src="e2erent_logo.png" alt="E2ERent" class="image" height="45"/></a>
 
                         <a class="btn btn-link text-white">Publish a property</a>
                     </nav>
                 </div>
 
-                <div class="row w-75 mx-auto mt-auto pt-4">
+                <div class="container-lg row mx-auto mt-auto pt-4">
                     <div class="col-lg-7 cta-wrapper my-auto">
-                        <h1>Rent your new home with ease and without abusive charges</h1>
+                        <h1>Rent your new home without abusive charges!</h1>
                     </div>
 
                     <div class="col-lg-5">
@@ -107,16 +112,32 @@
                             <h3>Apply now</h3>
                             <p>Enter your info and then you receive a notification when our platform is live.</p>
 
-                            <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" id="mc-embedded-subscribe-form">
+                            <div id="feedback-success" class="alert alert-success d-none" role="alert">
+                                <h4 class="alert-heading">Thank you!</h4>
+                                You will be notified as soon as our platform is launched!
+                            </div>
+
+                            <div id="feedback-error" class="alert alert-danger d-none" role="alert">
+                                <h4 class="alert-heading">Sorry! :(</h4>
+                                Something unexpected happened and were not able to store your info, please try again.
+                            </div>
+
+                            <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" class="needs-validation" novalidate>
                                 <div class="form-group">
                                     <label for="inputName">Name</label>
-                                    <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Your Name">
+                                    <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Your Name" required minlength="2" maxlength="40">
+                                    <div class="invalid-feedback">
+                                        Please provide a name that contains at least 2 characters.
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="inputEmail">Email address</label>
                                     <input name="EMAIL" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="your@email" required>
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address. For example, rent@e2erent.com.
+                                    </div>
                                 </div>
 
                                 <div class="form-group">
@@ -124,14 +145,25 @@
                                     <input name="PHONE" type="tel" class="form-control" id="inputPhone" placeholder="(+352) 000-000">
                                 </div>
 
-                                <div class="form-group form-check pb-2">
-                                    <input type="checkbox" name="gdpr[72353]" value="Y" class="form-check-input" id="inputGdpr">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="gdpr[72353]" value="Y" class="form-check-input" id="inputGdpr" required>
                                     <label class="form-check-label" for="inputGdpr">I agree that the information entered will be used to allow E2E Rent to contact me when the platform goes live.</label>
+                                    <div class="invalid-feedback">
+                                        Please you must agree with the terms.
+                                    </div>
+                                </div>
+
+                                <div class="form-group pb-2">
+                                    <div class="g-recaptcha" data-sitekey="6LfYHKsbAAAAADWv-fEOq8sfnFQJwHDA4zyYM4K8" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                    <input class="form-control d-none" name="captcha" data-recaptcha="true" required>
+                                    <div class="invalid-feedback">
+                                        Please complete the Captcha.
+                                    </div>
                                 </div>
 
                                 <input type="hidden" name="group[21897]" value="1">
 
-                                <button type="submit" class="btn btn-primary btn-block">Send</button>
+                                <button type="submit" class="btn btn-primary btn-block" id="buttonSubmit">Send</button>
                             </form>
                         </div>
                     </div>
@@ -139,10 +171,10 @@
             </header>
         </div>
 
-        <main role="main" class="w-75 px-4 mx-auto">
-            <h2 class="mb-2 pl-2">Renting a property was never this easy</h2>
+        <main role="main" class="container-lg px-md-4 mx-auto">
+            <h2 class="mb-md-2 pt-md-5 py-2">Renting a property was never this easy</h2>
 
-            <div class="row how-it-works-row">
+            <div class="row my-md-5 my-2">
                 <div class="col-lg-6 my-auto">
                     <h4 class="h1">Search</h4>
 
@@ -157,29 +189,27 @@
                 </div>
             </div>
 
-            <div class="row how-it-works-row">
-                <div class="col-lg-6">
-                    <div class="embed-responsive embed-responsive-1by1">
-                    <video class="elementor-video" src="https://videos.files.wordpress.com/YA5KjsTW/e2e-vignette-02-1_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 my-auto text-left">
+            <div class="row my-md-5 my-2">
+                <div class="col-lg-6 order-md-2 my-auto text-left">
                     <h4 class="h1">Visit</h4>
 
                     <p>Schedule a visit and take a closer look at the property you liked, or take for granted the
                         information available online as a virtual visit.</p>
                 </div>
+
+                <div class="col-lg-6 order-md-0">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <video class="elementor-video" src="https://videos.files.wordpress.com/YA5KjsTW/e2e-vignette-02-1_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                    </div>
+                </div>
             </div>
 
-            <div class="row how-it-works-row">
+            <div class="row my-md-5 my-2">
                 <div class="col-lg-6 my-auto">
                     <h4 class="h1">Rent</h4>
 
                     <p>Click on rent, digitally sign the contract, and you are all set. Now get the keys, move to your
                         new home, and relax. We take care of everything from end to end.</p>
-
-
                 </div>
 
                 <div class="col-lg-6">
@@ -190,10 +220,62 @@
             </div>
         </main>
 
-        <footer class="mt-auto w-75 px-4 mx-auto">
+        <footer class="mt-auto container-lg px-4 mx-auto">
             <hr />
             <p>© 2021 E2ERent.</p>
         </footer>
     </div>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+        window.verifyRecaptchaCallback = function (response) {
+            $('input[data-recaptcha]').val(response).trigger('change')
+        }
+
+        window.expiredRecaptchaCallback = function () {
+            $('input[data-recaptcha]').val('').trigger('change')
+        }
+
+        $('#buttonSubmit').on('click', function (e) {
+            e.preventDefault();
+
+            const form = $(this).parents('form');
+            let hasErrors = false;
+
+            form.find('input').each(function (index, input) {
+                if (input.checkValidity() === false) {
+                    hasErrors = true;
+                }
+            });
+
+            form.addClass('was-validated');
+
+            if (hasErrors === true) {
+                e.stopPropagation();
+                return;
+            }
+
+            const formAction = 'https://e2erent.us6.list-manage.com/subscribe/post-json?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f&c=?';
+
+            $.ajax({
+                url: formAction,
+                method: 'POST',
+                data: form.serialize(),
+                dataType: 'jsonp',
+                success: function (response) {
+                    if (response.result === 'success') {
+                        form[0].reset();
+                        form.removeClass('was-validated');
+
+                        $('#feedback-success').removeClass('d-none');
+                    } else {
+                        $('#feedback-error').removeClass('d-none');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
