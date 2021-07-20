@@ -95,76 +95,78 @@
         <div class="content-background">
             <header class="mb-auto">
                 <div class="header-content-wrapper">
-                    <nav class="site-header container-lg d-flex justify-content-between align-items-center py-1 mx-auto px-3">
+                    <nav class="site-header container-lg d-flex justify-content-between align-items-center py-1 mx-auto px-md-3">
                         <a class="navbar-brand" href="#"><img src="e2erent_logo.png" alt="E2ERent" class="image" height="45"/></a>
 
                         <a class="btn btn-link text-white">Publish a property</a>
                     </nav>
                 </div>
 
-                <div class="container-lg row mx-auto mt-auto pt-4">
-                    <div class="col-lg-7 cta-wrapper my-auto">
-                        <h1>Rent your new home without abusive charges!</h1>
-                    </div>
+                <div class="container-lg mx-auto mt-auto pt-4">
+                    <div class="row">
+                        <div class="col-lg-7 cta-wrapper my-md-auto mb-4 px-md-4">
+                            <h1>Rent your new home without abusive charges!</h1>
+                        </div>
 
-                    <div class="col-lg-5">
-                        <div class="form-wrapper shadow-sm p-4">
-                            <h3>Apply now</h3>
-                            <p>Enter your info and then you receive a notification when our platform is live.</p>
+                        <div class="col-lg-5">
+                            <div class="form-wrapper shadow-sm p-4">
+                                <h3>Apply now</h3>
+                                <p>Enter your info and then you receive a notification when our platform is live.</p>
 
-                            <div id="feedback-success" class="alert alert-success d-none" role="alert">
-                                <h4 class="alert-heading">Thank you!</h4>
-                                You will be notified as soon as our platform is launched!
+                                <div id="feedback-success" class="alert alert-success d-none" role="alert">
+                                    <h4 class="alert-heading">Thank you!</h4>
+                                    You will be notified as soon as our platform is launched!
+                                </div>
+
+                                <div id="feedback-error" class="alert alert-danger d-none" role="alert">
+                                    <h4 class="alert-heading">Sorry! :(</h4>
+                                    Something unexpected happened and were not able to store your info, please try again.
+                                </div>
+
+                                <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" class="needs-validation" novalidate>
+                                    <div class="form-group">
+                                        <label for="inputName">Name</label>
+                                        <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Your Name" required minlength="2" maxlength="40">
+                                        <div class="invalid-feedback">
+                                            Please provide a name that contains at least 2 characters.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="inputEmail">Email address</label>
+                                        <input name="EMAIL" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="your@email" required>
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email address. For example, rent@e2erent.com.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="inputPhone">Phone</label>
+                                        <input name="PHONE" type="tel" class="form-control" id="inputPhone" placeholder="(+352)000000">
+                                    </div>
+
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" name="gdpr[72353]" value="Y" class="form-check-input" id="inputGdpr" required>
+                                        <label class="form-check-label" for="inputGdpr">I agree that the information entered will be used to allow E2E Rent to contact me when the platform goes live.</label>
+                                        <div class="invalid-feedback">
+                                            Please you must agree with the terms.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group pb-2">
+                                        <div class="g-recaptcha" data-sitekey="6LfYHKsbAAAAADWv-fEOq8sfnFQJwHDA4zyYM4K8" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
+                                        <input class="form-control d-none" name="captcha" data-recaptcha="true" required>
+                                        <div class="invalid-feedback">
+                                            Please complete the Captcha.
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" name="group[21897]" value="1">
+
+                                    <button type="submit" class="btn btn-primary btn-block" id="buttonSubmit">Send</button>
+                                </form>
                             </div>
-
-                            <div id="feedback-error" class="alert alert-danger d-none" role="alert">
-                                <h4 class="alert-heading">Sorry! :(</h4>
-                                Something unexpected happened and were not able to store your info, please try again.
-                            </div>
-
-                            <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" class="needs-validation" novalidate>
-                                <div class="form-group">
-                                    <label for="inputName">Name</label>
-                                    <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Your Name" required minlength="2" maxlength="40">
-                                    <div class="invalid-feedback">
-                                        Please provide a name that contains at least 2 characters.
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="inputEmail">Email address</label>
-                                    <input name="EMAIL" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="your@email" required>
-                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid email address. For example, rent@e2erent.com.
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="inputPhone">Phone</label>
-                                    <input name="PHONE" type="tel" class="form-control" id="inputPhone" placeholder="(+352)000000">
-                                </div>
-
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="gdpr[72353]" value="Y" class="form-check-input" id="inputGdpr" required>
-                                    <label class="form-check-label" for="inputGdpr">I agree that the information entered will be used to allow E2E Rent to contact me when the platform goes live.</label>
-                                    <div class="invalid-feedback">
-                                        Please you must agree with the terms.
-                                    </div>
-                                </div>
-
-                                <div class="form-group pb-2">
-                                    <div class="g-recaptcha" data-sitekey="6LfYHKsbAAAAADWv-fEOq8sfnFQJwHDA4zyYM4K8" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback" style="transform:scale(0.85);-webkit-transform:scale(0.85);transform-origin:0 0;-webkit-transform-origin:0 0;"></div>
-                                    <input class="form-control d-none" name="captcha" data-recaptcha="true" required>
-                                    <div class="invalid-feedback">
-                                        Please complete the Captcha.
-                                    </div>
-                                </div>
-
-                                <input type="hidden" name="group[21897]" value="1">
-
-                                <button type="submit" class="btn btn-primary btn-block" id="buttonSubmit">Send</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -172,7 +174,7 @@
         </div>
 
         <main role="main" class="container-lg px-md-4 mx-auto">
-            <h2 class="mb-md-2 pt-md-5 py-2">Renting a property was never this easy</h2>
+            <h2 class="mb-md-2 pt-md-5 py-2 pt-4">Renting a property was never this easy</h2>
 
             <div class="row my-md-5 my-4">
                 <div class="col-lg-6 my-auto">
