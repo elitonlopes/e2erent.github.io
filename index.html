@@ -273,6 +273,7 @@
                         || (response.result === 'error' && response.msg.includes('already subscribed'))
                     ) {
                         form[0].reset();
+                        grecaptcha.reset();
                         form.removeClass('was-validated');
 
                         $('#feedback-success').removeClass('d-none');
