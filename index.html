@@ -268,7 +268,10 @@
                 data: form.serialize(),
                 dataType: 'jsonp',
                 success: function (response) {
-                    if (response.result === 'success') {
+                    if (
+                        response.result === 'success'
+                        || (response.result === 'error' && response.msg.includes('already subscribed'))
+                    ) {
                         form[0].reset();
                         form.removeClass('was-validated');
 
