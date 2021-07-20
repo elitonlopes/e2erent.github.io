@@ -25,6 +25,10 @@
             display: flex;
         }
 
+        header {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
         main {
             margin-top: 80px;
         }
@@ -34,7 +38,7 @@
         }
 
         .content-background {
-            background: url("background.jpeg") no-repeat bottom center fixed;
+            background: url("background.jpeg") no-repeat bottom center;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -43,7 +47,7 @@
 
         .form-wrapper {
             background: rgba(255, 255, 255, 0.9);
-            margin-bottom: -60px;
+            margin-bottom: 50px;
         }
 
         .cta-wrapper {
@@ -67,7 +71,7 @@
             border-color: #FCB750!important;
         }
 
-        input:focus {
+        input:focus, button:focus, button:active {
             box-shadow: none!important;
         }
 
@@ -87,16 +91,15 @@
             <header class="mb-auto">
                 <div class="header-content-wrapper">
                     <nav class="site-header d-flex justify-content-between align-items-center py-1 w-75 mx-auto px-3">
-                        <a class="navbar-brand" href="#"><img src="e2erent_logo.png" alt="E2ERent" class="image" height="48" width="48"/></a>
+                        <a class="navbar-brand" href="#"><img src="e2erent_logo.png" alt="E2ERent" class="image" height="45"/></a>
 
                         <a class="btn btn-link text-white">Publish a property</a>
                     </nav>
                 </div>
 
-                <div class="row w-75 mx-auto pt-4">
+                <div class="row w-75 mx-auto mt-auto pt-4">
                     <div class="col-lg-7 cta-wrapper my-auto">
-                        <h1>Rent your new home without abusive charges with a few clicks</h1>
-                        <h2 class="h5">Yeah, that's right! No agency fee, no security deposit and you can do everything online!</h2>
+                        <h1>Rent your new home with ease and without abusive charges</h1>
                     </div>
 
                     <div class="col-lg-5">
@@ -104,21 +107,26 @@
                             <h3>Apply now</h3>
                             <p>Enter your info and then you receive a notification when our platform is live.</p>
 
-                            <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" id="mc-embedded-subscribe-form">
                                 <div class="form-group">
-                                    <label for="mce-EMAIL">Email address</label>
-                                    <input name="EMAIL" type="email" class="form-control" id="mce-EMAIL" aria-describedby="emailHelp" placeholder="your@email" required>
+                                    <label for="inputName">Name</label>
+                                    <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Your Name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputEmail">Email address</label>
+                                    <input name="EMAIL" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="your@email" required>
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="PHONE">Phone</label>
-                                    <input name="PHONE" type="tel" class="form-control" id="PHONE" placeholder="(+352) 000-000">
+                                    <label for="inputPhone">Phone</label>
+                                    <input name="PHONE" type="tel" class="form-control" id="inputPhone" placeholder="(+352) 000-000">
                                 </div>
 
                                 <div class="form-group form-check pb-2">
-                                    <input type="checkbox" name="gdpr[72353]" value="Y" class="form-check-input" id="gdpr">
-                                    <label class="form-check-label" for="gdpr">I agree that the information entered will be used to allow E2E Rent to contact me when the platform goes live.</label>
+                                    <input type="checkbox" name="gdpr[72353]" value="Y" class="form-check-input" id="inputGdpr">
+                                    <label class="form-check-label" for="inputGdpr">I agree that the information entered will be used to allow E2E Rent to contact me when the platform goes live.</label>
                                 </div>
 
                                 <input type="hidden" name="group[21897]" value="1">
@@ -129,31 +137,34 @@
                     </div>
                 </div>
             </header>
-
         </div>
 
         <main role="main" class="w-75 px-4 mx-auto">
-            <h3 class="text-center my-4">How it Works</h3>
+            <h2 class="mb-2 pl-2">Renting a property was never this easy</h2>
 
             <div class="row how-it-works-row">
-                <div class="col-lg-5 my-auto">
+                <div class="col-lg-6 my-auto">
                     <h4 class="h1">Search</h4>
 
                     <p>Start by exploring properties to rent. Apply filters like pets allowed, furnished and the number
                         of bedrooms to narrow your options. You can also save favorites to a wishlist.</p>
                 </div>
 
-                <div class="col-lg-7 text-left">
-                    <video class="elementor-video" src="https://videos.files.wordpress.com/D1837SHJ/e2e-vignette-01_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                <div class="col-lg-6">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <video class="elementor-video" src="https://videos.files.wordpress.com/D1837SHJ/e2e-vignette-01_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                    </div>
                 </div>
             </div>
 
             <div class="row how-it-works-row">
-                <div class="col-lg-7 text-center">
+                <div class="col-lg-6">
+                    <div class="embed-responsive embed-responsive-1by1">
                     <video class="elementor-video" src="https://videos.files.wordpress.com/YA5KjsTW/e2e-vignette-02-1_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                    </div>
                 </div>
 
-                <div class="col-lg-5 my-auto text-left">
+                <div class="col-lg-6 my-auto text-left">
                     <h4 class="h1">Visit</h4>
 
                     <p>Schedule a visit and take a closer look at the property you liked, or take for granted the
@@ -162,23 +173,26 @@
             </div>
 
             <div class="row how-it-works-row">
-                <div class="col-lg-5 my-auto">
+                <div class="col-lg-6 my-auto">
                     <h4 class="h1">Rent</h4>
 
                     <p>Click on rent, digitally sign the contract, and you are all set. Now get the keys, move to your
                         new home, and relax. We take care of everything from end to end.</p>
+
+
                 </div>
 
-                <div class="col-lg-7 text-center">
-                    <video class="elementor-video" src="https://videos.files.wordpress.com/gPg6ai0e/e2e-vignette-03_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                <div class="col-lg-6">
+                    <div class="embed-responsive embed-responsive-1by1">
+                        <video class="elementor-video" src="https://videos.files.wordpress.com/gPg6ai0e/e2e-vignette-03_mp4_hd.mp4" autoplay="" loop="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                    </div>
                 </div>
             </div>
-
-            <h3 class="text-center my-4">Renting a property was never this easy</h3>
         </main>
 
         <footer class="mt-auto w-75 px-4 mx-auto">
-            <p>Copyright © 2021 E2ERent</p>
+            <hr />
+            <p>© 2021 E2ERent.</p>
         </footer>
     </div>
 </body>
