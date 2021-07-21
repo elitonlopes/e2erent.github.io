@@ -18,7 +18,7 @@ footer {
 }
 
 .content-background {
-    background: url("../background.jpeg") no-repeat bottom center;
+    background: url("background.jpeg") no-repeat bottom center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
