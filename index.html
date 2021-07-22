@@ -55,16 +55,16 @@
 
                                 <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" class="needs-validation mt-3" novalidate>
                                     <div class="form-group">
-                                        <label for="inputName">Name</label>
-                                        <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Enter your full name" required minlength="2" maxlength="40">
+                                        <label for="inputName">Name <span class="text-danger">*</span></label>
+                                        <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Name" required minlength="2" maxlength="40">
                                         <div class="invalid-feedback">
                                             Please provide a name that contains at least 2 characters.
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="inputEmail">Email address</label>
-                                        <input name="EMAIL" type="email" class="form-control" id="inputEmail" aria-describedby="helpEmail" placeholder="Enter your email address" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                                        <label for="inputEmail">Email address <span class="text-danger">*</span></label>
+                                        <input name="EMAIL" type="email" class="form-control" id="inputEmail" aria-describedby="helpEmail" placeholder="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
                                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                         <div class="invalid-feedback">
                                             Please provide a valid email address. For example, rent@e2erent.com.
@@ -73,7 +73,7 @@
 
                                     <div class="form-group form-check">
                                         <input type="checkbox" name="gdpr[72353]" value="Y" class="form-check-input" id="inputGdpr" required>
-                                        <label class="form-check-label" for="inputGdpr">I agree that the information entered will be used to allow E2E Rent to contact me when the platform goes live.</label>
+                                        <label class="form-check-label" for="inputGdpr">I agree that the information entered will be used to allow E2E Rent to contact me when the platform goes live. <span class="text-danger">*</span></label>
                                         <div class="invalid-feedback">
                                             Please you must agree with the terms.
                                         </div>
