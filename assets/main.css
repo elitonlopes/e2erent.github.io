@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    background-color: #FFFFFF;
+    color: #9FA1A5;
+}
+
+body {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    /*background-color: #8A8A8A;*/
+}
+
+.content-background-tenant {
+    background: url("images/background-tenant.jpeg") no-repeat bottom center;
+}
+
+.content-background-landlord {
+    background: url("images/background-landlord.jpeg") no-repeat bottom center;
+}
+
+.content-background-tenant, .content-background-landlord {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.form-wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    margin-bottom: 50px;
+}
+
+.cta-wrapper {
+    color: #fff;
+    text-shadow: 1px 1px #9FA1A5;
+}
+
+h4 {
+    color: #FCB750;
+}
+
+.header-content-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+button, .btn-primary {
+    background-color: #FCB750!important;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: #f8c16e!important;
+    border-color: #FCB750!important;
+}
+
+button, .btn-primary, input:focus, select:focus {
+    border-color: #FCB750!important;
+}
+
+input:focus, button:focus, button:active, select:focus, select:active {
+    box-shadow: none!important;
+}
+
+.w-75 {
+    max-width: 1200px;
+}
+
+.how-it-works-row {
+    margin: 120px 0;
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-size: 1.6em; }
+
+.fa-check-circle:before {
+    content: "\f058"; }
+
+.fa,
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900; }
+
+.far {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400; }
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("webfonts/fa-solid-900.eot");
+    src: url("webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("webfonts/fa-solid-900.woff2") format("woff2"), url("webfonts/fa-solid-900.woff") format("woff"), url("webfonts/fa-solid-900.ttf") format("truetype"), url("webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
