@@ -10,7 +10,8 @@ $('#buttonSubmit').on('click', function (e) {
     e.preventDefault();
 
     $('#feedback-success').addClass('d-none');
-    $('#feedback-error').addClass('d-none').text('');
+    $('#feedback-error').addClass('d-none');
+    $('#errorMessage').text('');
 
     const button = $(this);
     const form = $(this).parents('form');
