@@ -75,7 +75,7 @@
                                         <div class="media-body">
                                             <h3>Professional Photos</h3>
 
-                                            <p>We take professional photos for your listings. They become even more
+                                            <p class="m-0">We take professional photos for your listings. They become even more
                                                 attractive, and you only receive proposals from interested people.</p>
                                         </div>
                                     </li>
@@ -96,12 +96,21 @@
                                 </div>
 
                                 <h3>Apply now to be notified when our platform is live</h3>
-                                <small class="mb-2">Do you want to rent a property? <a href="../">click here</a>.</small>
 
                                 <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" class="needs-validation mt-3" novalidate>
+                                    <div class="form-group form-check-inline">
+                                        <input class="form-check-input" type="radio" name="interest" id="interestTenant" value="tenant">
+                                        <label class="form-check-label" for="interestTenant">Tenant</label>
+                                    </div>
+
+                                    <div class="form-group form-check-inline">
+                                        <input class="form-check-input" type="radio" name="interest" id="interestLandlord" value="landlord" checked="checked">
+                                        <label class="form-check-label" for="interestLandlord">Landlord</label>
+                                    </div>
+
                                     <div class="form-group">
                                         <label for="inputName">Name <span class="text-danger">*</span></label>
-                                        <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Name" required minlength="2" maxlength="40">
+                                        <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Name" required minlength="2" maxlength="30">
                                         <div class="invalid-feedback">
                                             Please provide a name that contains at least 2 characters.
                                         </div>
@@ -165,7 +174,7 @@
             </header>
         </div>
 
-        <footer class="mt-auto container-lg px-4 py-2 mx-auto">
+        <footer class="container-lg px-4 py-2 mx-auto">
             © 2021 E2ERent.
         </footer>
     </div>

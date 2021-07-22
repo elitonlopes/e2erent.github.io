@@ -26,7 +26,7 @@
             <header class="mb-auto">
                 <div class="header-content-wrapper">
                     <nav class="site-header container-lg d-flex justify-content-between align-items-center py-1 mx-auto px-md-3">
-                        <a class="navbar-brand" href="#"><img src="assets/images/e2erent_logo.png" alt="E2ERent" class="image" height="45"/></a>
+                        <a class="navbar-brand" href="#"><img src="assets/images/e2erent_logo.png" alt="E2ERent" class="image" height="30"/></a>
 
                         <a class="btn btn-primary" href="landlord/">For Landlords</a>
                     </nav>
@@ -51,9 +51,18 @@
                                 </div>
 
                                 <h3>Apply now to be notified when our platform is live</h3>
-                                <small>Do you have a property for rent? <a href="landlord/">click here</a>.</small>
 
                                 <form action="https://e2erent.us6.list-manage.com/subscribe/post?u=f3fe2fb41852845ea4e39aebc&amp;id=9ff0f8c27f" method="post" class="needs-validation mt-3" novalidate>
+                                    <div class="form-group form-check-inline">
+                                        <input class="form-check-input" type="radio" name="interest" id="interestTenant" value="tenant" checked="checked">
+                                        <label class="form-check-label" for="interestTenant">Tenant</label>
+                                    </div>
+
+                                    <div class="form-group form-check-inline">
+                                        <input class="form-check-input" type="radio" name="interest" id="interestLandlord" value="landlord">
+                                        <label class="form-check-label" for="interestLandlord">Landlord</label>
+                                    </div>
+
                                     <div class="form-group">
                                         <label for="inputName">Name <span class="text-danger">*</span></label>
                                         <input name="NAME" type="text" class="form-control" id="inputName" placeholder="Name" required minlength="2" maxlength="40">

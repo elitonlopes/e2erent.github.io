@@ -6,6 +6,17 @@ window.expiredRecaptchaCallback = function () {
     $('input[data-recaptcha]').val('').trigger('change')
 }
 
+$('input[name=interest]').change(function () {
+    const currentPage = window.location.pathname;
+    const interest = $(this).val();
+
+    if (currentPage.includes('landlord') && interest === 'tenant') {
+        window.location.href = '../';
+    } else if (!currentPage.includes('landlord') && interest === 'landlord') {
+        window.location.href = 'landlord/';
+    }
+});
+
 $('#buttonSubmit').on('click', function (e) {
     e.preventDefault();
 
