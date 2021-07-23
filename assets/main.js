@@ -11,9 +11,9 @@ $('input[name=interest]').change(function () {
     const interest = $(this).val();
 
     if (currentPage.includes('landlord') && interest === 'tenant') {
-        window.location.href = '../';
+        window.location.href = '../?utm_source=landing&utm_medium=form_radio&utm_id=v1';
     } else if (!currentPage.includes('landlord') && interest === 'landlord') {
-        window.location.href = 'landlord/';
+        window.location.href = 'landlord/?utm_source=landing&utm_medium=form_radio&utm_id=v1';
     }
 });
 
