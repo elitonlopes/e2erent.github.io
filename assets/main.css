@@ -66,6 +66,19 @@ input:focus, button:focus, button:active, select:focus, select:active {
     box-shadow: none!important;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #d6d6d6!important;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #d6d6d6!important;;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #d6d6d6!important;;
+}
+
 .w-75 {
     max-width: 1200px;
 }
